@@ -2,8 +2,8 @@
 import os
 
 # Código
-tentativa = True
-while tentativa == True:
+flag = True
+while flag == True:
     os.system("cls")
     peso = float(input("Qual o seu peso(kg)? "))
     altura = float(input("Qual a sua altura(m)? "))
@@ -11,7 +11,7 @@ while tentativa == True:
     if (peso <= 0) or (altura <= 0):
         print("\n\n---Digite números válidos---\n\n")
         os.system("pause")
-        tentativa = True
+        flag = True
     else:
         imc = peso / (altura**2)
 
@@ -29,4 +29,10 @@ while tentativa == True:
             print("\nIMC entre 35 e 39.9 --> Obesidade Grau II(severa).\n")
         else:
             print("\nIMC maior ou igual a 40 --> Obesidade Grau III(morbida).\n")
-        tentativa = False
+        
+        mensagem = input("Gostaria de calcular novamente?(S/N) ")
+        msg = mensagem.upper()
+        if msg == "S":
+            flag = True
+        else:
+            flag = False
