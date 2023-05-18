@@ -1,4 +1,4 @@
-# Bibliotecas
+# Library
 import os
 
 # Código
